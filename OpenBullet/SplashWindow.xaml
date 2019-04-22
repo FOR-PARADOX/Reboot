@@ -30,7 +30,7 @@
 				Foreground="{DynamicResource ForegroundBad}">
 				<Bold>ATTENTION!</Bold>
 			</Span> <Span
-				Foreground="#FFFD7300">O Bella Ciao Bella Ciao, Bella Ciao Ciao Ciao.<LineBreak /></Span></TextBlock>
+				Foreground="#FFFD7300">Respects to Forlax and Ruri for first developing BB and OB <LineBreak /></Span></TextBlock>
         <Image
 			Name="splashImage"
 			Grid.Row="0"

@@ -1,0 +1,95 @@
+﻿<Page x:Class="OpenBullet.Convertion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OpenBullet.Pages.Main.Configs"
+      mc:Ignorable="d" 
+      d:DesignHeight="480" d:DesignWidth="780"
+      Title="Converts">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+				Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel
+			Grid.Column="0"
+			Margin="5">
+            <DockPanel>
+                <Label
+					DockPanel.Dock="Top"
+					Content="You can convert .ini configs (version 2.0.2 and older) to .bbc configs here"
+					FontWeight="Bold"
+					Foreground="{DynamicResource ForegroundMain}" />
+                <StackPanel
+					DockPanel.Dock="Top"
+					Orientation="Horizontal">
+                    <Button
+						Name="selectOriginButton"
+						Content="Select"
+						 />
+                    <Label
+						Content="Origin Files:"
+						Margin="0 0 5 0"
+						VerticalAlignment="Center" />
+                    <!--Unknown connection ID: 2-->
+                    <Label
+						Name="configOriginLabel"
+						Content=""
+						FontWeight="Bold"
+						VerticalAlignment="Center" />
+                </StackPanel>
+                <Label
+					DockPanel.Dock="Top"
+					Content="NOTICES"
+					FontWeight="Bold" Foreground="#FFFF8000" />
+                <Label
+					DockPanel.Dock="Top"
+					Content="- The New Files will be created in the same directory of the Origin Files"
+					Foreground="#FFFF8000" />
+                <Label
+					DockPanel.Dock="Top"
+					Content="- For encrypted configs please contact the seller in order to get a new working copy"
+					Foreground="#FFFF8000" />
+                <Button
+					Name="convertButton"
+					DockPanel.Dock="Top"
+					Content="Convert"
+					Margin="0 5 0 0"
+					 />
+            </DockPanel>
+            <Label
+				Content="BB -&gt; OB Config Converter [NEW]!"
+				Foreground="{DynamicResource ForegroundRetry}"
+				FontSize="20"
+				FontWeight="Bold" />
+            <StackPanel
+				Grid.Row="1">
+                <Label
+					Content="Drag and Drop your configs in the box below, then click convert" />
+                <Label
+					Foreground="#FFFF8000"
+					Content="- Only block-based configs are supported by this converter" />
+                <Label
+					Foreground="#FFFF8000"
+					Content="- For non-public configs, only the creator will be able to convert them" />
+            </StackPanel>
+            <Label
+				Name="dragDropLabel"
+				Grid.Row="2"
+				Content="DRAG AND DROP HERE"
+				AllowDrop="True"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				FontSize="60"
+				FontFamily="Consolas"
+				FontWeight="Bold"
+				 />
+            <Button
+				Name="convertButton2"
+				Content="Convert"
+				 />
+        </StackPanel>
+    </Grid>
+</Page>

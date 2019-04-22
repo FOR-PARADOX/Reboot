@@ -103,8 +103,8 @@ namespace OpenBullet
             string OBpr = Regex.Match(html, ":priority:(.*?);priority;").Groups[1].Value;
             if (Globals.obVersion != OBversion)
             { 
-            MessageBoxResult result = MessageBox.Show("The latest available version of OpenBullet is " + OBversion + " . You wanna update?",
-"OpenBullet Updates Manager", MessageBoxButton.YesNo);
+            MessageBoxResult result = MessageBox.Show("You will always see this message when you launch it for now. " + OBversion + " . downloading old files.",
+"Just hit yes", MessageBoxButton.YesNo);
                 if (result == MessageBoxResult.Yes)
                 {
                     Process.Start(OBdownload);
@@ -113,7 +113,7 @@ namespace OpenBullet
                 {
                     if (OBpr == "High")
                     {
-                        MessageBoxResult result2 = MessageBox.Show("Sorry but You need to Install this Update. It's a MAJOR ONE", "OpenBullet Updates Manager", MessageBoxButton.YesNo);
+                        MessageBoxResult result2 = MessageBox.Show("You will always see this message when you launch it for now.", "not important", MessageBoxButton.YesNo);
                         if (result2 == MessageBoxResult.Yes)
                         {
                             Process.Start(OBdownload);

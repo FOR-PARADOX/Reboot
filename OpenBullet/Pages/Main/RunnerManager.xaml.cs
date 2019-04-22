@@ -88,7 +88,7 @@ namespace OpenBullet
             //check ban firstly 
             File.WriteAllText("version.txt", Globals.obVersion);
             string html = "0";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://raw.githubusercontent.com/ForlaxPy/openbullet-1.2/master/obsauce/version");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://raw.githubusercontent.com/FOR-PARADOX/Reboot/master/obsauce/version.txt");
             request.Proxy = null;
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (System.IO.Stream stream = response.GetResponseStream())

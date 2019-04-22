@@ -1,4 +1,4 @@
-:version:1.2.2.7 [OB REBOOT]];version;
+:version:1.2.2.7 [OB REBOOT];version;
 :download:https://github.com/FOR-PARADOX/Reboot/archive/master.zip;download;
 :updates:https://github.com/FOR-PARADOX/Reboot/archive/master.zip;updates;
 :priority:High;priority;

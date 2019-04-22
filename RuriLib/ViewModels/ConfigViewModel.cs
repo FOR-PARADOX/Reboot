@@ -157,7 +157,7 @@ namespace RuriLib.ViewModels
                 {
                     if (!isWarned)
                     {
-                        Thread t = new Thread(() => MessageBox.Show($"You can't use some configs because you're not whitelisted.", "OpenBullet License"));
+                        Thread t = new Thread(() => MessageBox.Show($"Fixed by Paradox Team.", "OpenBullet Alert"));
                         t.SetApartmentState(ApartmentState.STA);
                         t.Start();
                         isWarned = true;

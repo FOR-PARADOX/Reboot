@@ -9,7 +9,7 @@ namespace OpenBullet
     /// </summary>
     public partial class App : Application
     {
-        [Obfuscation(Exclude = false, Feature = "+koi;-ctrl flow")]
+        [Obfuscation(Exclude = true, Feature = "+koi;-ctrl flow")]
         protected override void OnStartup(StartupEventArgs e)
         {
             bool flag = false;
@@ -22,8 +22,7 @@ namespace OpenBullet
             }
             if (!flag)
             {
-                MessageBox.Show("Please Run OB from the Launcher");
-                Environment.Exit(0);
+               
             }
         }
     }

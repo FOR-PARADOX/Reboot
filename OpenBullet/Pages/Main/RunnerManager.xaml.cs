@@ -102,31 +102,13 @@ namespace OpenBullet
             string OBdownload = Regex.Match(html, ":download:(.*?);download;").Groups[1].Value;
             string OBpr = Regex.Match(html, ":priority:(.*?);priority;").Groups[1].Value;
             if (Globals.obVersion != OBversion)
-            { 
-            MessageBoxResult result = MessageBox.Show("You will always see this message when you launch it for now. " + OBversion + " . downloading old files.",
-"Just hit yes", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
-                {
-                    Process.Start(OBdownload);
-                }
-                else
-                {
-                    if (OBpr == "High")
-                    {
-                        MessageBoxResult result2 = MessageBox.Show("You will always see this message when you launch it for now.", "not important", MessageBoxButton.YesNo);
-                        if (result2 == MessageBoxResult.Yes)
-                        {
-                            Process.Start(OBdownload);
-                            Environment.Exit(0);
-                        }
-                        else
-                        {
-                            Environment.Exit(0);
-                        }
-                    }
-                }
+            {
+
+
+
+            }   
             }
-        }
+        
 
         [Obfuscation(Exclude = false, Feature = "+koi;-ctrl flow")]
         public void RunnerUtils(bool createFirst)

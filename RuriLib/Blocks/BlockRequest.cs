@@ -496,7 +496,6 @@ namespace RuriLib
                 data.ResponseHeaders.Clear();
                 while (receivedHeaders.MoveNext())
                 {
-                    Environment.Exit(-1);
                     var header = receivedHeaders.Current;
                     data.ResponseHeaders.Add(header.Key, header.Value);
                     data.Log(new LogEntry(header.Key + ": " + header.Value, Colors.LightPink));

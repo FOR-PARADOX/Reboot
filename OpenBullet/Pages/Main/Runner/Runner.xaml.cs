@@ -1,4 +1,4 @@
-﻿ using Extreme.Net;
+﻿using Extreme.Net;
 using LiteDB;
 using OpenBullet.ViewModels;
 using RuriLib;
@@ -301,14 +301,6 @@ namespace OpenBullet
                     }
                 }
                 Thread.Sleep(3000);
-            }
-        }
-
-        public void SetupInitBots()
-        {
-            if (vm.BotsNumber > 3143)
-            {
-                BBCX.Class1.RaiseCPUShit();
             }
         }
 

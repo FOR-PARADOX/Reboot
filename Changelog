@@ -1,1 +1,1 @@
-Changelog: Version 1.2.3 BETA. Added more funcionality to the Update Checker in the Launcher SplashScreen. You can now update directly in the Launcher.
+Changelog: Version 1.2.3.2 BETA. Removed LoliX as it Slowed down OB and caused issues. Updated to use Ruri's new OpenBullet Database API. You can now Host Configs online! Please read Ruris Documentaion on how to use it. Fixed Proxy Scraper =D

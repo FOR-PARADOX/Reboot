@@ -1,6 +1,3 @@
-Changelog: Version 1.2.3.8
+Changelog: Version 1.2.3.9
 
-Updated to Ruris Latest version of OB. Updated the Proxy scraper to use the latest version of ProxyScrapers API. Fixed some issues, Now has a discord notification since people are dropping this version on sites without mentioning our discord.
-
-
-You can use the OB_Updater to update, The Version number should update on Github soon for the Update checker
+Added RandomGUID to the Functions block

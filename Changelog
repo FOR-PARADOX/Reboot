@@ -1,4 +1,7 @@
-Changelog: Version 1.2.4
+Changelog: Version 1.2.5
 
-Added: A Plethora of new Function Block Options (Thanks Forlax). Updated The Update Checker to be more Accurate 
-(Cleaned up code as it was getting nasty)
+Reverted some of the Functions as it seemed to disable certain configs. (Kept Random GUID)
+
+Fixed the Captcha Services timeouts (DeCaptcher fix).
+
+Added support for HTML entities encoding and decoding.

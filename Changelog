@@ -5,3 +5,5 @@ Reverted some of the Functions as it seemed to disable certain configs. (Kept Ra
 Fixed the Captcha Services timeouts (DeCaptcher fix).
 
 Added support for HTML entities encoding and decoding.
+
+Lowered Bot count as theres `Some` evidence of possible Hit Skipping with increased bots.

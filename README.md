@@ -4,11 +4,11 @@ OpenBullet is a webtesting suite that allows to perform requests towards a targe
 
 **IMPORTANT!** Performing (D)DoS attacks or credential stuffing on sites you do not own (or you do not have permission to test) is **illegal!** The developer will not be held responsible for improper use of this software.
 
-![Runner](https://i.imgur.com/8HdLkJ5.png)
-![ConfigEncryption](https://i.imgur.com/K7nTjdr.png)
-![LicensingSystem](https://i.imgur.com/dWsGLH3.png)
-![proxies](https://i.imgur.com/VrVTBeW.png)
-![LoliKeys](https://i.imgur.com/8wB2m5w.png)
+![Launcher](https://i.imgur.com/P7yDqPP.png)
+![Runner](https://i.imgur.com/sEfKawu.png)
+![proxies](https://i.imgur.com/QIwAmSh.png)
+![Settings](https://i.imgur.com/RILF0uP.png)
+![Config Stacker](https://i.imgur.com/ibGyYep.png)
 
 
 [Here](https://openbullet.github.io) you can find the complete documentation for **usage**, **config making** and the **RuriLib API**.
@@ -28,4 +28,4 @@ This software is licensed under the MIT License.
 # Credits
 Ruri for all his works on OpenBullet v1 and Updates! His Bruteforcer is just amazing and he deserve some donations to his BTC: **39yMkox6pP8tnSC7rZ5EM4nUUHgPbg1fKM** 
 
-And Maybe if you like My Works here is my BTC: **3KQGpzrBvyRCxgDcrLXrFwy9NnyiKeYP4A**
+And Maybe if you like My Works here is my BTC: **13Kx8pJdezkiRWVtnX8VzwFx6474W2B328**

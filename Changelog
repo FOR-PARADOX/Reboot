@@ -1,9 +1,7 @@
-Changelog: Version 1.2.5
+Changelog: Version 1.2.6
 
-Reverted some of the Functions as it seemed to disable certain configs. (Kept Random GUID)
+Added back the removed Functions (All the different AES Options)
 
-Fixed the Captcha Services timeouts (DeCaptcher fix).
+Added back the Increased Bot Count. Now displays a warning.
 
-Added support for HTML entities encoding and decoding.
-
-Lowered Bot count as theres `Some` evidence of possible Hit Skipping with increased bots.
+Added Default Proxy Checking Settings. You can set them before launch using the two Txt Files (ProxyKey,ProxySite) or you can do it in the settings page in the proxies settings. (Notice: You will have to relaunch for changes to apply.)

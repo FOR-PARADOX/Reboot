@@ -1,7 +1,2 @@
-Changelog: Version 1.2.6B
-(Fixed the Proxy Checker Issue with the Extra Line)
-Added back the removed Functions (All the different AES Options)
-
-Added back the Increased Bot Count. Now displays a warning.
-
-Added Default Proxy Checking Settings. You can set them before launch using the two Txt Files (ProxyKey,ProxySite) or you can do it in the settings page in the proxies settings. (Notice: You will have to relaunch for changes to apply.)
+Changelog: Version 1.2.6.1
+Fix for Function Captures not working Properly

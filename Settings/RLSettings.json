@@ -1,0 +1,51 @@
+{
+  "General": {
+    "WaitTime": 100,
+    "RequestTimeout": 10,
+    "MaxHits": 0,
+    "BotsDisplayMode": 1,
+    "EnableBotLog": false,
+    "SaveLastSource": false
+  },
+  "Proxies": {
+    "ConcurrentUse": true,
+    "NeverBan": false,
+    "BanAfterGoodStatus": false,
+    "ShuffleOnStart": false,
+    "Reload": true,
+    "ReloadSource": 2,
+    "ReloadPath": "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all",
+    "ReloadType": 1,
+    "ParseWithIPRegex": false,
+    "AlwaysGetClearance": false,
+    "GlobalBanKeys": [],
+    "GlobalRetryKeys": []
+  },
+  "Captchas": {
+    "CurrentService": 0,
+    "AntiCapToken": "",
+    "ImageTypToken": "",
+    "DBCUser": "",
+    "DBCPass": "",
+    "TwoCapToken": "",
+    "RuCapToken": "",
+    "DCUser": "",
+    "DCPass": "",
+    "AZCapToken": "",
+    "SRUserId": "",
+    "SRToken": "",
+    "CIOToken": "",
+    "CDToken": "",
+    "BypassBalanceCheck": false,
+    "Timeout": 120
+  },
+  "Selenium": {
+    "Browser": 0,
+    "Headless": false,
+    "FirefoxBinaryLocation": "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe",
+    "ChromeBinaryLocation": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "ChromeExtensions": [],
+    "DrawMouseMovement": true,
+    "PageLoadTimeout": 60
+  }
+}

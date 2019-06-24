@@ -8,14 +8,14 @@
     "SaveLastSource": false
   },
   "Proxies": {
-    "ConcurrentUse": false,
+    "ConcurrentUse": true,
     "NeverBan": false,
     "BanAfterGoodStatus": false,
     "ShuffleOnStart": false,
     "Reload": true,
-    "ReloadSource": 0,
-    "ReloadPath": "",
-    "ReloadType": 0,
+    "ReloadSource": 2,
+    "ReloadPath": "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=10000&country=all",
+    "ReloadType": 1,
     "ParseWithIPRegex": false,
     "AlwaysGetClearance": false,
     "GlobalBanKeys": [],
